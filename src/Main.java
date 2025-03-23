@@ -17,6 +17,7 @@ public class Main {
             setDemo.add(b[i]);
         }
         System.out.println(setDemo);
-	//Testing line
+
+        System.out.println("Code is connected to Github Now..");
     }
 }
