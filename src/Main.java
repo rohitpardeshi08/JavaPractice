@@ -19,6 +19,5 @@ public class Main {
         System.out.println(setDemo);
 
         System.out.println("Code is connected to Github Now..");
-        System.out.println("Testing Pull request");
     }
 }
