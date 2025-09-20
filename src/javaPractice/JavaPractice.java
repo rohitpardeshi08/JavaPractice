@@ -5,35 +5,16 @@ import java.util.*;
 
 public class JavaPractice {
 	
-	public static void findingDuplicateOccurancesOfCharacter()
+	public static void findingLargestNumberInTheArray()
 	{
-		int count=0;
-		Set<Character> testSet=new HashSet<Character>();
+		int intArray[]= {97,11,22,1028,88,65,96,36};
 		
-		Scanner sc=new Scanner(System.in);
+		Arrays.sort(intArray);
 		
-		System.out.println("Enter String");
-		
-		String inputString=sc.next();
-		
-		System.out.println("Entered String is:"+inputString);
-		
-		sc.close();
-	
-		char charArray[]=inputString.toCharArray();
-		
-		for(int i=0;i<inputString.length();i++)
-		{
-			if(!testSet.add(charArray[i]))
-			{
-				System.out.println(charArray[i]);
-				count=count+1;
-			}
-		}
-		System.out.println("Count of Duplicate Elements are"+count);
+		System.out.println("Largest Number is"+intArray[intArray.length-1]);
 	}
 	public static void main(String args[])
 	{
-		findingDuplicateOccurancesOfCharacter();
+		findingLargestNumberInTheArray();
 	}
 }
