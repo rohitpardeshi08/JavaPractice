@@ -1,21 +1,39 @@
-//Finding Second Largest number in the Array:
+/*Write a Java method that takes a string as input and counts the occurrences of each character. 
+The method should return a Map where the key is the character and the value is its count.*/
 package javaPractice;
-
-import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicIntegerArray;
+import java.util.*;
 
 public class JavaPractice {
 	
-	public static void findSecondLargestNumber()
+	public static void findingDuplicateOccurancesOfCharacter()
 	{
-		int intArray[]= {100,99,88,44,76};
+		int count=0;
+		Set<Character> testSet=new HashSet<Character>();
 		
-		Arrays.sort(intArray);
+		Scanner sc=new Scanner(System.in);
 		
-		System.out.println("Second Largest Number is "+intArray[intArray.length-2]);
+		System.out.println("Enter String");
+		
+		String inputString=sc.next();
+		
+		System.out.println("Entered String is:"+inputString);
+		
+		sc.close();
+	
+		char charArray[]=inputString.toCharArray();
+		
+		for(int i=0;i<inputString.length();i++)
+		{
+			if(!testSet.add(charArray[i]))
+			{
+				System.out.println(charArray[i]);
+				count=count+1;
+			}
+		}
+		System.out.println("Count of Duplicate Elements are"+count);
 	}
 	public static void main(String args[])
 	{
-		findSecondLargestNumber();
+		findingDuplicateOccurancesOfCharacter();
 	}
 }
