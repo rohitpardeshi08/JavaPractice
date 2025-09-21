@@ -5,16 +5,34 @@ import java.util.*;
 
 public class JavaPractice {
 	
-	public static void findingLargestNumberInTheArray()
+	public static void countOccurancesOfCharacters()
 	{
-		int intArray[]= {97,11,22,1028,88,65,96,36};
+		Map<Character,Integer> testMap=new HashMap<Character,Integer>();
 		
-		Arrays.sort(intArray);
+		Scanner sc=new Scanner(System.in);
 		
-		System.out.println("Largest Number is"+intArray[intArray.length-1]);
+		System.out.println("Enter the String");
+		
+		String inputString=sc.next();
+		
+		sc.close();
+		
+		for(char c : inputString.toCharArray())
+		{
+			if(testMap.containsKey(c))
+			{
+				testMap.put(c, testMap.get(c)+1);
+			}
+			else
+			{
+				testMap.put(c,1);
+			}
+		}
+		
+		System.out.println(testMap);
 	}
 	public static void main(String args[])
 	{
-		findingLargestNumberInTheArray();
+		countOccurancesOfCharacters();
 	}
 }
